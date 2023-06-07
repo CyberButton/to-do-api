@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { TodoistApi } from "@doist/todoist-api-typescript"
 import 'tailwindcss/tailwind.css';
+import './styles.css';
 
 const api = new TodoistApi("bb57a7eb53e2d76bb74eebdf165eb66a9764e352");
 
@@ -103,7 +104,7 @@ const App = () => {
           className="bg-blue-500 hover:bg-blue-600 text-white rounded-r-md px-4 py-2"
           onClick={addTodo}
         >
-          Add
+          ---Add---
         </button>
       </div>
       <ul>
@@ -125,7 +126,7 @@ const App = () => {
               className="text-red-500 hover:text-red-600"
               onClick={() => deleteTodo(index, todo.id)}
             >
-              Delete
+              ---Delete---
             </button>
           </li>
         ))}
